@@ -1,54 +1,87 @@
 const FinanceiroDashboard = () => {
   const months = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"];
-  const receitas = [45, 52, 48, 60, 55, 65];
-  const despesas = [30, 35, 38, 32, 40, 35];
+  const receitas = [48, 55, 50, 62, 58, 68];
+  const despesas = [32, 38, 35, 34, 42, 38];
 
   return (
     <div className="space-y-3">
-      <div className="flex gap-2">
-        <span className="text-[9px] font-mono px-2 py-0.5 rounded bg-cyan-500/10 text-primary">2024</span>
-        <span className="text-[9px] font-mono px-2 py-0.5 rounded bg-white/5 text-muted-foreground">Consolidado</span>
+      <div className="flex gap-2 flex-wrap">
+        <span className="dash-filter dash-filter-active">2024</span>
+        <span className="dash-filter dash-filter-inactive">Consolidado</span>
+        <span className="dash-filter dash-filter-inactive">Acumulado</span>
       </div>
 
       <div className="grid grid-cols-3 gap-2">
         {[
-          { label: "Receitas", value: "R$ 325k", color: "text-emerald-400" },
-          { label: "Despesas", value: "R$ 210k", color: "text-red-400" },
-          { label: "Saldo", value: "R$ 115k", color: "text-cyan-400" },
+          { label: "Receitas", value: "R$ 341k", color: "text-emerald-400" },
+          { label: "Despesas", value: "R$ 219k", color: "text-red-400" },
+          { label: "Saldo Líquido", value: "R$ 122k", color: "text-cyan-400" },
         ].map((kpi, i) => (
-          <div key={i} className="bg-white/[0.03] rounded-lg p-2.5">
-            <div className="text-[8px] font-mono text-muted-foreground">{kpi.label}</div>
-            <div className={`text-xs font-bold font-mono ${kpi.color}`}>{kpi.value}</div>
+          <div key={i} className="dash-kpi">
+            <div className="text-[7px] font-mono text-muted-foreground leading-none mb-1">{kpi.label}</div>
+            <div className={`text-[14px] font-bold font-mono leading-none ${kpi.color}`}>{kpi.value}</div>
           </div>
         ))}
       </div>
 
       {/* Receitas vs Despesas bars */}
-      <div>
-        <div className="text-[9px] font-mono text-muted-foreground mb-2">Receitas vs Despesas</div>
+      <div className="dash-inner p-3">
+        <div className="flex items-center justify-between mb-2">
+          <div className="text-[9px] font-mono text-muted-foreground">Receitas vs Despesas</div>
+          <div className="flex gap-3">
+            <div className="flex items-center gap-1">
+              <div className="w-2 h-2 rounded-sm bg-emerald-500/50" />
+              <span className="text-[7px] font-mono text-muted-foreground">Receitas</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <div className="w-2 h-2 rounded-sm bg-red-400/40" />
+              <span className="text-[7px] font-mono text-muted-foreground">Despesas</span>
+            </div>
+          </div>
+        </div>
         <div className="flex items-end gap-2 h-20">
           {months.map((m, i) => (
             <div key={i} className="flex-1 flex flex-col items-center gap-0.5">
-              <div className="w-full flex gap-0.5 items-end" style={{ height: "60px" }}>
-                <div className="flex-1 bg-emerald-500/30 rounded-t-sm" style={{ height: `${(receitas[i] / 65) * 60}px` }} />
-                <div className="flex-1 bg-red-400/25 rounded-t-sm" style={{ height: `${(despesas[i] / 65) * 60}px` }} />
+              <div className="w-full flex gap-[2px] items-end h-16">
+                <div className="flex-1 bg-gradient-to-t from-emerald-600/30 to-emerald-400/50 rounded-t" style={{ height: `${(receitas[i] / 70) * 64}px` }} />
+                <div className="flex-1 bg-gradient-to-t from-red-500/25 to-red-400/35 rounded-t" style={{ height: `${(despesas[i] / 70) * 64}px` }} />
               </div>
-              <span className="text-[7px] font-mono text-muted-foreground">{m}</span>
+              <span className="text-[7px] font-mono text-muted-foreground/70">{m}</span>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Legend */}
-      <div className="flex gap-4">
-        <div className="flex items-center gap-1.5">
-          <div className="w-2 h-2 rounded-sm bg-emerald-500/50" />
-          <span className="text-[8px] font-mono text-muted-foreground">Receitas</span>
+      {/* Margin gauge */}
+      <div className="dash-inner p-3">
+        <div className="flex justify-between items-center">
+          <div>
+            <div className="text-[9px] font-mono text-muted-foreground">Margem Líquida</div>
+            <div className="text-lg font-bold font-mono text-foreground">35.8%</div>
+          </div>
+          <svg width="50" height="50" viewBox="0 0 50 50">
+            <circle cx="25" cy="25" r="20" fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth="5" />
+            <circle cx="25" cy="25" r="20" fill="none" stroke="#22d3ee" strokeWidth="5" strokeDasharray="80 126" strokeLinecap="round" transform="rotate(-90 25 25)" />
+          </svg>
         </div>
-        <div className="flex items-center gap-1.5">
-          <div className="w-2 h-2 rounded-sm bg-red-400/40" />
-          <span className="text-[8px] font-mono text-muted-foreground">Despesas</span>
+      </div>
+
+      {/* Monthly comparison */}
+      <div className="dash-inner overflow-hidden">
+        <div className="grid grid-cols-4 text-[7px] font-mono text-muted-foreground px-3 py-1.5 border-b border-white/[0.04]">
+          <span>Conta</span><span>Atual</span><span>Anterior</span><span>Var.</span>
         </div>
+        {[
+          ["Folha", "R$ 85k", "R$ 82k", "+3.6%"],
+          ["Fornecedores", "R$ 52k", "R$ 48k", "+8.3%"],
+          ["Operacional", "R$ 34k", "R$ 36k", "-5.5%"],
+          ["Impostos", "R$ 28k", "R$ 26k", "+7.6%"],
+        ].map((row, i) => (
+          <div key={i} className="grid grid-cols-4 text-[7px] font-mono text-foreground/80 px-3 py-1.5 border-b border-white/[0.02]">
+            <span>{row[0]}</span><span>{row[1]}</span><span>{row[2]}</span>
+            <span className={row[3].startsWith("-") ? "text-emerald-400" : "text-red-400"}>{row[3]}</span>
+          </div>
+        ))}
       </div>
     </div>
   );
