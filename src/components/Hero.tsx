@@ -5,15 +5,11 @@ import HeroDashboardMockup from "./HeroDashboardMockup";
 const Hero = () => {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center pt-20 pb-16 overflow-hidden">
-      {/* Grid pattern */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-50 pointer-events-none" />
-      {/* Radial glow */}
-      <div className="absolute top-1/3 right-1/4 w-[700px] h-[700px] rounded-full bg-cyan-500/[0.03] blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-cyan-500/[0.02] blur-[80px] pointer-events-none" />
+      <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
+      <div className="absolute top-1/3 right-1/4 w-[700px] h-[700px] rounded-full bg-primary/[0.03] blur-[100px] pointer-events-none" />
 
       <div className="container mx-auto px-6 md:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-          {/* Left */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -23,7 +19,7 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.1 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/[0.08] border border-primary/[0.15] mb-8"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/[0.06] border border-primary/[0.12] mb-8"
             >
               <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
               <span className="text-[11px] font-mono text-primary font-medium">Analista de Dados Freelancer</span>
@@ -58,7 +54,6 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Right - Dashboard Mockup */}
           <div className="hidden lg:block relative">
             <HeroDashboardMockup />
           </div>

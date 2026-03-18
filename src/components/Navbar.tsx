@@ -17,7 +17,6 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
-      
       const sections = navLinks.map(l => l.href.slice(1));
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
@@ -33,12 +32,12 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      scrolled 
-        ? "bg-background/70 backdrop-blur-xl border-b border-white/[0.06]" 
+      scrolled
+        ? "bg-background/80 backdrop-blur-xl border-b border-border/60 shadow-sm"
         : "bg-transparent"
     }`}>
       <div className="container mx-auto flex items-center justify-between px-6 md:px-8 py-4">
-        <a href="#inicio" className="group flex items-baseline gap-2">
+        <a href="#inicio" className="flex items-baseline gap-2">
           <span className="text-sm md:text-base font-semibold text-foreground tracking-tight">
             Giovanna Ferreira
           </span>
@@ -47,7 +46,6 @@ const Navbar = () => {
           </span>
         </a>
 
-        {/* Desktop */}
         <div className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
             <a
@@ -64,16 +62,14 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden w-9 h-9 flex items-center justify-center rounded-lg text-muted-foreground hover:text-foreground hover:bg-white/[0.04] transition-all"
+          className="md:hidden w-9 h-9 flex items-center justify-center rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-all"
         >
           {isOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -81,7 +77,7 @@ const Navbar = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
-            className="md:hidden bg-background/95 backdrop-blur-2xl border-b border-white/[0.06] overflow-hidden"
+            className="md:hidden bg-background/95 backdrop-blur-2xl border-b border-border/60 overflow-hidden"
           >
             <div className="flex flex-col px-6 py-5 gap-1">
               {navLinks.map((link) => (
@@ -92,7 +88,7 @@ const Navbar = () => {
                   className={`text-sm font-medium px-4 py-3 rounded-xl transition-all ${
                     activeSection === link.href
                       ? "text-primary bg-primary/[0.08]"
-                      : "text-muted-foreground hover:text-foreground hover:bg-white/[0.03]"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
                   }`}
                 >
                   {link.label}
