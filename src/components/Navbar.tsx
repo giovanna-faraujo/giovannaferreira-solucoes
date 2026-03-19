@@ -41,9 +41,6 @@ const Navbar = () => {
           <span className="text-sm md:text-base font-semibold text-foreground tracking-tight">
             Giovanna Ferreira
           </span>
-          <span className="hidden sm:inline text-xs text-muted-foreground font-normal">
-            Analista de Dados
-          </span>
         </a>
 
         <div className="hidden md:flex items-center gap-1">
