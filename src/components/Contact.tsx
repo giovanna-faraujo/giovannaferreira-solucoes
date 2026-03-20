@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { MessageCircle, Mail } from "lucide-react";
 
-const whatsappLink = "https://wa.me/5511978467800?text=Ol%C3%A1%20Giovanna%2C%20vi%20seu%20site%20e%20gostaria%20de%20entender%20melhor%20como%20voc%C3%AA%20pode%20me%20ajudar%20com%20dados%20e%20automa%C3%A7%C3%B5es.";
-
 const Contact = () => {
   return (
     <section id="contato" className="py-28 md:py-36 relative">
@@ -19,7 +17,7 @@ const Contact = () => {
           className="text-center max-w-2xl mx-auto"
         >
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-foreground mb-5">
-            Vamos transformar seus dados em <span className="text-gradient-cyan">estratégia</span> e sua rotina em <span className="text-gradient-cyan">eficiência</span>?
+            Quer entender melhor os números do seu <span className="text-gradient-cyan">negócio</span>?
           </h2>
           <p className="text-muted-foreground leading-relaxed text-base mb-12">
             Se você quer acompanhar seus resultados com mais clareza, tirar dúvidas ou solicitar um orçamento, estou à disposição para te ajudar.
@@ -27,7 +25,7 @@ const Contact = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
             <a
-              href={whatsappLink}
+              href="https://wa.me/5511978467800"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp px-10 py-4 text-sm"

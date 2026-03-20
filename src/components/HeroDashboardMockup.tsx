@@ -1,26 +1,4 @@
 import { motion } from "framer-motion";
-import { BarChart3, Database, Settings, TrendingUp, PieChart, Cog } from "lucide-react";
-
-const floatingIconVariants = {
-  animate: (i: number) => ({
-    y: [0, -12, 0],
-    transition: {
-      duration: 3 + i * 0.5,
-      repeat: Infinity,
-      ease: "easeInOut" as const,
-      delay: i * 0.4,
-    },
-  }),
-};
-
-const floatingIcons = [
-  { Icon: BarChart3, className: "absolute -top-4 -right-4 w-10 h-10 p-2 rounded-xl bg-card text-primary", style: { boxShadow: "0 4px 16px rgba(14,116,144,0.12)" } },
-  { Icon: Database, className: "absolute top-1/4 -left-6 w-9 h-9 p-2 rounded-lg bg-card text-primary", style: { boxShadow: "0 4px 16px rgba(14,116,144,0.10)" } },
-  { Icon: Settings, className: "absolute bottom-1/4 -right-6 w-9 h-9 p-2 rounded-lg bg-card text-primary/80", style: { boxShadow: "0 4px 16px rgba(14,116,144,0.10)" } },
-  { Icon: TrendingUp, className: "absolute -top-2 left-1/4 w-8 h-8 p-1.5 rounded-lg bg-card text-primary/70", style: { boxShadow: "0 4px 12px rgba(14,116,144,0.08)" } },
-  { Icon: PieChart, className: "absolute bottom-8 -left-4 w-8 h-8 p-1.5 rounded-lg bg-card text-primary/70", style: { boxShadow: "0 4px 12px rgba(14,116,144,0.08)" } },
-  { Icon: Cog, className: "absolute -bottom-2 right-1/4 w-9 h-9 p-2 rounded-lg bg-card text-primary/80", style: { boxShadow: "0 4px 14px rgba(14,116,144,0.10)" } },
-];
 
 const HeroDashboardMockup = () => {
   return (
@@ -30,20 +8,6 @@ const HeroDashboardMockup = () => {
       transition={{ delay: 0.3, duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
       className="relative w-full"
     >
-      {/* Floating icons */}
-      {floatingIcons.map(({ Icon, className, style }, i) => (
-        <motion.div
-          key={i}
-          custom={i}
-          variants={floatingIconVariants}
-          animate="animate"
-          className={className}
-          style={style}
-        >
-          <Icon className="w-full h-full" />
-        </motion.div>
-      ))}
-
       {/* Main dashboard frame */}
       <div
         className="relative rounded-2xl overflow-hidden bg-card"
