@@ -7,7 +7,7 @@ const floatingIconVariants = {
     transition: {
       duration: 3 + i * 0.5,
       repeat: Infinity,
-      ease: "easeInOut",
+      ease: "easeInOut" as const,
       delay: i * 0.4,
     },
   }),
