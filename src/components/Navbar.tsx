@@ -37,9 +37,12 @@ const Navbar = () => {
         : "bg-transparent"
     }`}>
       <div className="container mx-auto flex items-center justify-between px-6 md:px-8 py-4">
-        <a href="#inicio" className="flex items-baseline gap-2">
-          <span className="text-sm md:text-base font-semibold text-foreground tracking-tight">
+        <a href="#inicio" className="flex items-baseline gap-1.5">
+          <span className="text-sm md:text-base font-bold text-foreground tracking-tight">
             Giovanna Ferreira
+          </span>
+          <span className="hidden sm:inline text-[11px] font-light text-muted-foreground">
+            | Analista de Dados e Automações
           </span>
         </a>
 

@@ -1,6 +1,7 @@
 const PousadasDashboard = () => {
   const months = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago"];
   const occupancy = [72, 85, 68, 91, 78, 88, 65, 82];
+  const revenue = [42, 58, 38, 72, 55, 68, 35, 62];
 
   return (
     <div className="space-y-3">
@@ -20,7 +21,7 @@ const PousadasDashboard = () => {
           <div key={i} className="dash-kpi">
             <div className="text-[7px] font-mono text-muted-foreground leading-none mb-1">{kpi.label}</div>
             <div className="text-[13px] font-bold font-mono text-foreground leading-none">{kpi.value}</div>
-            <div className="text-[8px] font-mono mt-1 text-emerald-600">{kpi.change}</div>
+            <div className={`text-[8px] font-mono mt-1 ${kpi.change.startsWith('-') ? 'text-red-500' : 'text-emerald-600'}`}>{kpi.change}</div>
           </div>
         ))}
       </div>
@@ -45,7 +46,7 @@ const PousadasDashboard = () => {
       </div>
 
       <div className="dash-inner p-3">
-        <div className="text-[9px] font-mono text-muted-foreground mb-1">Faturamento por Mês</div>
+        <div className="text-[9px] font-mono text-muted-foreground mb-1">Previsão de Faturamento</div>
         <svg viewBox="0 0 240 40" className="w-full h-8">
           <defs>
             <linearGradient id="pousArea" x1="0" y1="0" x2="0" y2="1">
@@ -53,8 +54,10 @@ const PousadasDashboard = () => {
               <stop offset="100%" stopColor="#0e7490" stopOpacity="0" />
             </linearGradient>
           </defs>
-          <path d="M0,30 Q30,22 60,25 T120,15 T180,20 T240,8 V40 H0 Z" fill="url(#pousArea)" />
-          <path d="M0,30 Q30,22 60,25 T120,15 T180,20 T240,8" fill="none" stroke="#0e7490" strokeWidth="1.5" strokeLinecap="round" />
+          <path d={`M${revenue.map((v, i) => `${i * (240 / (revenue.length - 1))},${40 - v * 0.5}`).join(' L')} V40 H0 Z`} fill="url(#pousArea)" />
+          <path d={`M${revenue.map((v, i) => `${i * (240 / (revenue.length - 1))},${40 - v * 0.5}`).join(' L')}`} fill="none" stroke="#0e7490" strokeWidth="1.5" strokeLinecap="round" />
+          <line x1="170" y1="0" x2="170" y2="40" stroke="#0e7490" strokeWidth="0.5" strokeDasharray="3 3" opacity="0.4" />
+          <text x="175" y="8" className="text-[6px] font-mono fill-primary">Projeção</text>
         </svg>
       </div>
 
