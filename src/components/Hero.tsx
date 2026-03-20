@@ -22,25 +22,25 @@ const Hero = () => {
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/[0.06] border border-primary/[0.12] mb-8"
             >
               <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              <span className="text-[11px] font-mono text-primary font-medium">Analista de Dados Freelancer</span>
+              <span className="text-[11px] font-mono text-primary font-medium">Analista de Dados e Automações</span>
             </motion.div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground leading-[1.15] mb-7">
-              Quer transformar seus dados em decisões mais{" "}
-              <span className="text-gradient-cyan">inteligentes</span>?
+              Transformando dados em <span className="text-gradient-cyan">decisões</span> e processos em{" "}
+              <span className="text-gradient-cyan">eficiência</span> através de dashboards estratégicos e automações inteligentes.
             </h1>
 
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-[55ch] mb-5">
-              Eu ajudo empresas e pequenos negócios a organizarem seus números, entenderem seus resultados e acompanharem o que realmente importa com painéis visuais claros e fáceis de usar.
+              Eu ajudo empresas e pequenos negócios a organizarem seus números, entenderem seus resultados e acompanharem o que realmente importa com painéis visuais claros e automações práticas.
             </p>
 
             <p className="text-sm text-muted-foreground/60 font-mono mb-10">
-              Painéis personalizados para acompanhar resultados com mais clareza
+              Dashboards estratégicos e automações inteligentes para o seu negócio
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="https://wa.me/5511978467800"
+                href="https://wa.me/5511978467800?text=Ol%C3%A1%20Giovanna%2C%20vi%20seu%20site%20e%20gostaria%20de%20entender%20melhor%20como%20voc%C3%AA%20pode%20me%20ajudar%20com%20dados%20e%20automa%C3%A7%C3%B5es."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp px-8 py-3.5 text-sm"

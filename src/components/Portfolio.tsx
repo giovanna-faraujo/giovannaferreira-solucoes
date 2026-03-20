@@ -1,31 +1,31 @@
 import { motion } from "framer-motion";
 import DashboardCard from "./DashboardCard";
 import PousadasDashboard from "./dashboards/PousadasDashboard";
-import AtendimentoDashboard from "./dashboards/AtendimentoDashboard";
-import SupermercadoDashboard from "./dashboards/SupermercadoDashboard";
+import ImobiliarioDashboard from "./dashboards/ImobiliarioDashboard";
+import VarejoTurismoDashboard from "./dashboards/VarejoTurismoDashboard";
 import FinanceiroDashboard from "./dashboards/FinanceiroDashboard";
 import ComercialDashboard from "./dashboards/ComercialDashboard";
 import RHDashboard from "./dashboards/RHDashboard";
 
 const dashboards = [
   {
-    title: "Painel de Gestão para Pousadas",
-    description: "Acompanhe reservas, ocupação, faturamento e cancelamentos com mais clareza para melhorar a gestão da sua hospedagem.",
+    title: "Pousadas e Hotelaria",
+    description: "Gestão de ocupação, previsão de faturamento, reservas e sazonalidade para melhorar a rentabilidade da sua hospedagem.",
     component: PousadasDashboard,
   },
   {
-    title: "Painel de Atendimento e Chamados",
-    description: "Monitore tickets, tempo de atendimento, SLA e produtividade da equipe para acompanhar a operação com mais controle.",
-    component: AtendimentoDashboard,
+    title: "Mercado Imobiliário",
+    description: "Valorização de m², performance de vendas, comparativos regionais e indicadores de conversão para decisões mais assertivas.",
+    component: ImobiliarioDashboard,
   },
   {
-    title: "Painel de Gestão para Supermercados",
-    description: "Visualize vendas, faturamento, produtos mais vendidos e estoque para facilitar decisões no dia a dia do varejo.",
-    component: SupermercadoDashboard,
+    title: "Varejo e Turismo",
+    description: "Análise de ticket médio, giro de estoque, sazonalidade e tendências para otimizar vendas e operação.",
+    component: VarejoTurismoDashboard,
   },
   {
     title: "Painel Financeiro",
-    description: "Tenha uma visão clara de receitas, despesas, saldo e comparativos mensais para organizar melhor sua gestão financeira.",
+    description: "Visão clara de receitas, despesas, saldo e comparativos mensais para organizar melhor sua gestão financeira.",
     component: FinanceiroDashboard,
   },
   {
@@ -34,7 +34,7 @@ const dashboards = [
     component: ComercialDashboard,
   },
   {
-    title: "Painel de Indicadores de RH",
+    title: "Indicadores de RH",
     description: "Monitore admissões, desligamentos, absenteísmo e outros indicadores importantes para apoiar a gestão de pessoas.",
     component: RHDashboard,
   },
