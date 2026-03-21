@@ -18,7 +18,7 @@ export default {
         mono: ['JetBrains Mono', 'monospace'],
       },
       colors: {
-        border: "rgba(255, 255, 255, 0.07)",
+        border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",

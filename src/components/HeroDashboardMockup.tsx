@@ -96,7 +96,7 @@ const HeroDashboardMockup = () => {
             >
               <div className="text-[9px] font-mono text-muted-foreground mb-2 self-start">Por Região</div>
               <svg width="64" height="64" viewBox="0 0 64 64">
-                <circle cx="32" cy="32" r="24" fill="none" stroke="hsl(214,20%,90%)" strokeWidth="7" />
+                <circle cx="32" cy="32" r="24" fill="none" stroke="hsl(var(--border))" strokeWidth="7" />
                 <circle cx="32" cy="32" r="24" fill="none" stroke="#0e7490" strokeWidth="7" strokeDasharray="55 151" strokeLinecap="round" transform="rotate(-90 32 32)" />
                 <circle cx="32" cy="32" r="24" fill="none" stroke="#0891b2" strokeWidth="7" strokeDasharray="35 151" strokeDashoffset="-55" strokeLinecap="round" transform="rotate(-90 32 32)" />
                 <circle cx="32" cy="32" r="24" fill="none" stroke="#67e8f9" strokeWidth="7" strokeDasharray="25 151" strokeDashoffset="-90" strokeLinecap="round" transform="rotate(-90 32 32)" />
