@@ -11,7 +11,7 @@ const HeroDashboardMockup = () => {
       {/* Main dashboard frame */}
       <div
         className="relative rounded-2xl overflow-hidden bg-card"
-        style={{ boxShadow: "0 0 0 1px hsl(214,20%,90%), 0 20px 50px -10px rgba(0,0,0,0.1), 0 0 30px rgba(14,116,144,0.05)" }}
+        style={{ boxShadow: "0 0 0 1px hsl(var(--border)), 0 20px 50px -10px rgba(0,0,0,0.1), 0 0 30px rgba(14,116,144,0.05)" }}
       >
         {/* Window chrome */}
         <div className="flex items-center gap-2 px-4 py-2.5 border-b border-border">
