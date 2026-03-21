@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -14,6 +14,24 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("#inicio");
+  const [isDark, setIsDark] = useState(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("theme");
+      if (saved) return saved === "dark";
+      return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (isDark) {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  }, [isDark]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,14 +77,30 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
+          <button
+            onClick={() => setIsDark(!isDark)}
+            className="ml-2 w-9 h-9 flex items-center justify-center rounded-full text-muted-foreground hover:text-foreground hover:bg-muted transition-all duration-300"
+            aria-label="Alternar tema"
+          >
+            {isDark ? <Sun size={16} /> : <Moon size={16} />}
+          </button>
         </div>
 
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden w-9 h-9 flex items-center justify-center rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-all"
-        >
-          {isOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <button
+            onClick={() => setIsDark(!isDark)}
+            className="w-9 h-9 flex items-center justify-center rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-all"
+            aria-label="Alternar tema"
+          >
+            {isDark ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="w-9 h-9 flex items-center justify-center rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-all"
+          >
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>

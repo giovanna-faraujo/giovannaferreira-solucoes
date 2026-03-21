@@ -11,7 +11,7 @@ const HeroDashboardMockup = () => {
       {/* Main dashboard frame */}
       <div
         className="relative rounded-2xl overflow-hidden bg-card"
-        style={{ boxShadow: "0 0 0 1px hsl(214,20%,90%), 0 20px 50px -10px rgba(0,0,0,0.1), 0 0 30px rgba(14,116,144,0.05)" }}
+        style={{ boxShadow: "0 0 0 1px hsl(var(--border)), 0 20px 50px -10px rgba(0,0,0,0.1), 0 0 30px rgba(14,116,144,0.05)" }}
       >
         {/* Window chrome */}
         <div className="flex items-center gap-2 px-4 py-2.5 border-b border-border">
@@ -77,7 +77,7 @@ const HeroDashboardMockup = () => {
                   </linearGradient>
                 </defs>
                 {[20, 40, 60].map(y => (
-                  <line key={y} x1="0" y1={y} x2="260" y2={y} stroke="hsl(214,20%,90%)" strokeWidth="0.5" />
+                  <line key={y} x1="0" y1={y} x2="260" y2={y} stroke="hsl(var(--border))" strokeWidth="0.5" />
                 ))}
                 <path d="M0,65 Q20,58 40,52 T80,42 T120,38 T160,28 T200,22 T240,15 L260,12 V80 H0 Z" fill="url(#heroArea)" />
                 <path d="M0,65 Q20,58 40,52 T80,42 T120,38 T160,28 T200,22 T240,15 L260,12" fill="none" stroke="#0e7490" strokeWidth="2" strokeLinecap="round" />
@@ -96,7 +96,7 @@ const HeroDashboardMockup = () => {
             >
               <div className="text-[9px] font-mono text-muted-foreground mb-2 self-start">Por Região</div>
               <svg width="64" height="64" viewBox="0 0 64 64">
-                <circle cx="32" cy="32" r="24" fill="none" stroke="hsl(214,20%,90%)" strokeWidth="7" />
+                <circle cx="32" cy="32" r="24" fill="none" stroke="hsl(var(--border))" strokeWidth="7" />
                 <circle cx="32" cy="32" r="24" fill="none" stroke="#0e7490" strokeWidth="7" strokeDasharray="55 151" strokeLinecap="round" transform="rotate(-90 32 32)" />
                 <circle cx="32" cy="32" r="24" fill="none" stroke="#0891b2" strokeWidth="7" strokeDasharray="35 151" strokeDashoffset="-55" strokeLinecap="round" transform="rotate(-90 32 32)" />
                 <circle cx="32" cy="32" r="24" fill="none" stroke="#67e8f9" strokeWidth="7" strokeDasharray="25 151" strokeDashoffset="-90" strokeLinecap="round" transform="rotate(-90 32 32)" />
