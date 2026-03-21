@@ -77,7 +77,7 @@ const HeroDashboardMockup = () => {
                   </linearGradient>
                 </defs>
                 {[20, 40, 60].map(y => (
-                  <line key={y} x1="0" y1={y} x2="260" y2={y} stroke="hsl(214,20%,90%)" strokeWidth="0.5" />
+                  <line key={y} x1="0" y1={y} x2="260" y2={y} stroke="hsl(var(--border))" strokeWidth="0.5" />
                 ))}
                 <path d="M0,65 Q20,58 40,52 T80,42 T120,38 T160,28 T200,22 T240,15 L260,12 V80 H0 Z" fill="url(#heroArea)" />
                 <path d="M0,65 Q20,58 40,52 T80,42 T120,38 T160,28 T200,22 T240,15 L260,12" fill="none" stroke="#0e7490" strokeWidth="2" strokeLinecap="round" />
