@@ -22,16 +22,17 @@ const Hero = () => {
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/[0.06] border border-primary/[0.12] mb-8"
             >
               <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              <span className="text-[11px] font-mono text-primary font-medium">Analista de Dados Freelancer</span>
+              <span className="text-[11px] font-mono text-primary font-medium">Analista de Dados e Automações</span>
             </motion.div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground leading-[1.15] mb-7">
-              Quer transformar seus dados em decisões mais{" "}
-              <span className="text-gradient-cyan">inteligentes</span>?
+              Transformo dados em decisões mais{" "}
+              <span className="text-gradient-cyan">claras</span> e tarefas em processos mais{" "}
+              <span className="text-gradient-cyan">eficientes</span>
             </h1>
 
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-[55ch] mb-5">
-              Eu ajudo empresas e pequenos negócios a organizarem seus números, entenderem seus resultados e acompanharem o que realmente importa com painéis visuais claros e fáceis de usar.
+              Dashboards e automações simples para o dia a dia, ajudando empresas e pequenos negócios a acompanharem resultados e reduzirem tarefas manuais.
             </p>
 
             <p className="text-sm text-muted-foreground/60 font-mono mb-10">
@@ -48,8 +49,8 @@ const Hero = () => {
                 <MessageCircle className="w-4 h-4" />
                 Falar comigo
               </a>
-              <a href="#paineis" className="btn-outline-glow px-7 py-3.5 text-sm">
-                Ver exemplos de painéis
+              <a href="#solucoes" className="btn-outline-glow px-7 py-3.5 text-sm">
+                Ver exemplos de soluções
               </a>
             </div>
           </motion.div>

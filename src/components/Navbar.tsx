@@ -5,7 +5,8 @@ import { Menu, X } from "lucide-react";
 const navLinks = [
   { label: "Início", href: "#inicio" },
   { label: "Benefícios", href: "#beneficios" },
-  { label: "Painéis", href: "#paineis" },
+  { label: "Soluções", href: "#solucoes" },
+  { label: "Serviços", href: "#servicos" },
   { label: "Contato", href: "#contato" },
 ];
 
@@ -41,6 +42,7 @@ const Navbar = () => {
           <span className="text-sm md:text-base font-semibold text-foreground tracking-tight">
             Giovanna Ferreira
           </span>
+          <span className="hidden sm:inline text-xs text-muted-foreground ml-1">| Dados & Automações</span>
         </a>
 
         <div className="hidden md:flex items-center gap-1">

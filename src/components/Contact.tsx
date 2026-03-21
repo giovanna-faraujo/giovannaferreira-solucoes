@@ -17,10 +17,13 @@ const Contact = () => {
           className="text-center max-w-2xl mx-auto"
         >
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-foreground mb-5">
-            Quer entender melhor os números do seu <span className="text-gradient-cyan">negócio</span>?
+            Quer entender como organizar melhor seus dados ou automatizar processos no seu <span className="text-gradient-cyan">negócio</span>?
           </h2>
-          <p className="text-muted-foreground leading-relaxed text-base mb-12">
-            Se você quer acompanhar seus resultados com mais clareza, tirar dúvidas ou solicitar um orçamento, estou à disposição para te ajudar.
+          <p className="text-muted-foreground leading-relaxed text-base mb-6">
+            Se você quer acompanhar seus resultados com mais clareza, reduzir tarefas manuais ou entender qual solução faz mais sentido para sua rotina, estou à disposição para te ajudar.
+          </p>
+          <p className="text-sm text-muted-foreground/70 mb-12 max-w-lg mx-auto">
+            Posso te ajudar a identificar oportunidades com dashboards, automações ou uma combinação dos dois, de forma prática e alinhada à sua realidade.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
@@ -42,9 +45,13 @@ const Contact = () => {
             </a>
           </div>
 
-          <p className="text-sm text-muted-foreground/60 max-w-md mx-auto leading-relaxed">
-            Respondo dúvidas, entendo sua necessidade e proponho uma solução prática para o seu negócio.
-          </p>
+          <div className="border-t border-border/50 pt-8 mt-4">
+            <p className="text-sm font-semibold text-foreground">Giovanna Ferreira</p>
+            <p className="text-xs text-muted-foreground mt-1">Analista de Dados e Automações</p>
+            <p className="text-xs text-muted-foreground/60 mt-2 max-w-sm mx-auto">
+              Dashboards claros e automações práticas para melhorar a rotina e apoiar decisões.
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>
