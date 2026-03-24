@@ -56,5 +56,3 @@ Explicação clara de como dados e automações ajudam a:
 
 ---
 
-## 📂 Estrutura do Projeto
-
