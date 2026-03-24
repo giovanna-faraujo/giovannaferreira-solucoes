@@ -1,7 +1,6 @@
 # 🌐 Giovanna Ferreira - Soluções em Dados & Automação
 
 ![Site](https://img.shields.io/badge/🌐_SITE-giovannaferreira-blueviolet?style=for-the-badge&logo=github&logoColor=white)
-[![LinkedIn](https://img.shields.io/badge/💼_LinkedIn-giovanna--f--araujo-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/giovanna-f-araujo)
 
 > **Portfólio online de soluções em Business Intelligence, dashboards e automação de processos**
 
