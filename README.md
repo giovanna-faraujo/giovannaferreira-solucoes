@@ -1,4 +1,4 @@
-# 🌐 Giovanna Ferreira - Soluções em Dados & Automação
+# Giovanna Ferreira - Soluções em Dados & Automação
 
 ![Site](https://img.shields.io/badge/🌐_SITE-giovannaferreira-blueviolet?style=for-the-badge&logo=github&logoColor=white)
 
@@ -6,7 +6,7 @@
 
 ---
 
-## 📋 Sobre Este Projeto
+## Sobre Este Projeto
 
 Este é o **site/portfólio profissional** onde apresento soluções práticas de análise de dados e automação para diferentes setores de negócio.
 
@@ -16,21 +16,21 @@ Este é o **site/portfólio profissional** onde apresento soluções práticas d
 
 ---
 
-## 🎯 O Que Você Vai Encontrar
+## Visão Geral
 
-### 📊 **Dashboards Interativos**
+### **Dashboards Interativos**
 Exemplos práticos de painéis desenvolvidos para:
 - **Gestão de Ocupação e Reservas** (Hotéis e Pousadas)
 - **Performance Imobiliária** (Imobiliárias e Corretores)
 - **Acompanhamento de Vendas** (Varejo e Comércio)
 
-### ⚙️ **Soluções de Automação**
+### **Soluções de Automação**
 Processos automatizados que:
 - Reduzem tarefas manuais repetitivas
 - Organizam fluxos de trabalho
 - Economizam tempo da equipe
 
-### 💡 **Benefícios para o Negócio**
+### **Benefícios para o Negócio**
 Explicação clara de como dados e automações ajudam a:
 - Tomar decisões com mais clareza
 - Acompanhar resultados facilmente
@@ -39,7 +39,7 @@ Explicação clara de como dados e automações ajudam a:
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 ### **Desenvolvimento do Site**
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
