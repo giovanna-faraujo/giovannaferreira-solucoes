@@ -6,8 +6,6 @@
 
 ---
 
-## Sobre Este Projeto
-
 Este é o **site/portfólio profissional** onde apresento soluções práticas de análise de dados e automação para diferentes setores de negócio.
 
 **Objetivo:** Demonstrar, de forma visual e acessível, como dashboards e automações podem transformar a maneira como empresas acompanham resultados e tomam decisões.
