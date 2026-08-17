@@ -24,11 +24,15 @@ Exemplos práticos de painéis desenvolvidos para:
 - **Performance Imobiliária** (Imobiliárias e Corretores)
 - **Acompanhamento de Vendas** (Varejo e Comércio)
 
+---
+
 ### **Soluções de Automação**
 Processos automatizados que:
 - Reduzem tarefas manuais repetitivas
 - Organizam fluxos de trabalho
 - Economizam tempo da equipe
+
+---
 
 ### **Benefícios para o Negócio**
 Explicação clara de como dados e automações ajudam a:
