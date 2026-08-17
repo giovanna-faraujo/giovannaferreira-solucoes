@@ -12,7 +12,7 @@ Este é o **site/portfólio profissional** onde apresento soluções práticas d
 
 **Objetivo:** Demonstrar, de forma visual e acessível, como dashboards e automações podem transformar a maneira como empresas acompanham resultados e tomam decisões.
 
-🔗 **Acesse:** [giovanna-faraujo.github.io/giovannaferreira-solucoes](https://giovanna-faraujo.github.io/giovannaferreira-solucoes/)
+🔗 **Acesse a página web:** [giovanna-faraujo.github.io/giovannaferreira-solucoes](https://giovanna-faraujo.github.io/giovannaferreira-solucoes/)
 
 ---
 
